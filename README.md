@@ -13,3 +13,4 @@ Incomplete revision notes.
 1. Run `cargo install mdbook`
 1. Run `mdbook watch` in the repository root
 1. Edit away, the book will update itself when a file change is detected
+1. ***Update the book before pushing changes***
