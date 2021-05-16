@@ -18,12 +18,6 @@ Term|Notation
 prediction|\\(\hat{y}_i\\)
 hyper-parameter|\\(\theta\in\Theta\\)
 
-### Parametric vs Non-Parametric Models
-
-Property\Model Type|Parametric|Non-Parametric
--|-|-
-\# of parameters/model size|\\(\Theta(1)\\)|superconstant
-
 ## Classification
 
 Term|Notation

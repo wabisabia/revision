@@ -30,6 +30,7 @@
 
 		- [Notation](cs342/background/notation.md)
 		- [Types of Learning](cs342/background/learning.md)
+		- [Types of Models](cs342/background/models.md)
 		- [Joint Probabilities](cs342/background/joint_probabilities.md)
 		- [Random Variables](cs342/background/random_variables.md)
 		- [Conditional Probabilities](cs342/background/conditional_probabilities.md)
@@ -56,5 +57,9 @@
 		- [Additive Smoothing](cs342/prob_class/smoothing.md)
 
 	- [K-Nearest Neighbour Classifiers](cs342/knn_class.md)
+
+	- [Regression](cs342/regression.md)
+
+		- [Linear Regression](cs342/regression/linear.md)
 
 - [🐲 CS325 - Compiler Design](cs325/intro.md)
