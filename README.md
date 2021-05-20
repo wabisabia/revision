@@ -9,8 +9,7 @@ Incomplete revision notes.
 
 ## Contributing
 
-1. [Install `rustup`](https://www.rust-lang.org/tools/install)
-1. Run `cargo install mdbook`
+1. Install [`mdbook`](https://github.com/rust-lang/mdBook)
 1. Run `mdbook watch` in the repository root
 1. Edit away, the book will update itself when a file change is detected
-1. ***Update the book before pushing changes***
+1. **_Update the book before pushing changes_**
