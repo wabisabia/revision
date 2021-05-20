@@ -1,6 +1,6 @@
 # Revision
 
-- [📈 CS352 - Project Management for Computer Scientists](cs352/intro.md)
+- [📈 CS352 - Project Management for Computer Scientists](cs352.md)
 
 	- [Background and Definitions](cs352/background/intro.md)
 		- [PMBOK](cs352/background/pmbok.md)
@@ -61,5 +61,4 @@
 	- [Regression](cs342/regression.md)
 
 		- [Linear Regression](cs342/regression/linear.md)
-
-- [🐲 CS325 - Compiler Design](cs325/intro.md)
+		- [Introducing Non-Linearities](cs342/regression/non-linear.md)
