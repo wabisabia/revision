@@ -4,7 +4,6 @@
 
 	- [Background and Definitions](cs352/background/intro.md)
 		- [PMBOK](cs352/background/pmbok.md)
-		- [PRINCE2&trade;](cs352/background/prince2.md)
 		- [Iron Triangle](cs352/background/iron_triangle.md)
 		- [Stakeholders](cs352/background/stakeholders.md)
 
@@ -23,6 +22,15 @@
 		- [Managing Risk](cs352/oversight/managing_risk.md)
 
 	- [Closing](cs352/closing/closing.md)
+
+	- [PRINCE2&trade;](cs352/prince2.md)
+
+		- [Principles](cs352/prince2/principles.md)
+		- [Roles](cs352/prince2/roles.md)
+		- [Processes](cs352/prince2/processes.md)
+		- [Themes](cs352/prince2/themes.md)
+		- [Principles vs Themes](cs352/prince2/principles-vs-themes.md)
+		- [Management Products](cs352/prince2/management-products.md)
 
 - [🤖 CS342 - Machine Learning️](cs342.md)
 
