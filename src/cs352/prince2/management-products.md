@@ -7,7 +7,7 @@ Project delivers _products_, not _activities_
 - Work towards a product's _specification_
 - Aim to assure a product's _quality_
 
-To _produce_ a product:
+Required to _produce_ a product:
 
 | Document                    | Purpose                            |
 | --------------------------- | ---------------------------------- |

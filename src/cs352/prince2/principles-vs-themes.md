@@ -1,6 +1,6 @@
 # Principles vs Themes
 
-| Principle     | Theme                                                      |
+| Principle     | Theme(s)                                                   |
 | ------------- | ---------------------------------------------------------- |
 | Business Case | Continuous Business Justification                          |
 | Organisation  | Defined Roles and Responsibilities                         |
