@@ -1,5 +1,68 @@
 # Revision
 
+- [🖥️ CS324 - Computer Graphics](cs324.md)
+
+  - [Devices and Perception](cs324/devices-and-perception.md)
+
+  - [2D Primitives](cs324/primitives.md)
+
+  - [Filled Area Primitives](cs324/filled-area-primitives.md)
+
+  - [Anti-Aliasing](cs324/anti-aliasing.md)
+
+  - [2D Transformation and Viewing](cs324/2d-transformation-and-viewing.md)
+
+  - [2D Clipping](cs324/clipping)
+
+  - [3D Transformation and Viewing](cs324/3d-transformation-and-viewing.md)
+
+  - [3D Modelling](cs324/modelling.md)
+
+  - [Surfaces](cs324/surfaces.md)
+
+  - [Illumination and Shading](cs324/illumination-and-shading.md)
+
+  - [Ray Tracing and Radiosity](cs324/ray-tracing-and-radiosity.md)
+
+- [🤖 CS342 - Machine Learning️](cs342.md)
+
+  - [Mathematical Background](cs342/background.md)
+
+    - [Notation](cs342/background/notation.md)
+    - [Types of Learning](cs342/background/learning.md)
+    - [Types of Models](cs342/background/models.md)
+    - [Joint Probabilities](cs342/background/joint_probabilities.md)
+    - [Random Variables](cs342/background/random_variables.md)
+    - [Conditional Probabilities](cs342/background/conditional_probabilities.md)
+    - [Bayes Rule](cs342/background/bayes.md)
+    - [Norms](cs342/background/norms.md)
+
+  - [Decision Trees](cs342/decision_trees.md)
+
+    - [Decision Stumps](cs342/decision_trees/decision_stumps.md)
+    - [Greedy Recursive Splitting](cs342/decision_trees/greedy_recursive_splitting.md)
+    - [Entropy](cs342/decision_trees/entropy.md)
+
+  - [Learning Theory](cs342/learning_theory.md)
+
+    - [Error](cs342/learning_theory/error.md)
+    - [IID](cs342/learning_theory/iid.md)
+    - [Hyper-Parameters](cs342/learning_theory/parameters.md)
+    - [Cross Validation](cs342/learning_theory/cross_validation.md)
+    - ["No Free Lunch" Theorem](cs342/learning_theory/nfl.md)
+
+  - [Probabilistic Classifiers](cs342/prob_class.md)
+
+    - [Naïve Bayes](cs342/prob_class/naive.md)
+    - [Additive Smoothing](cs342/prob_class/smoothing.md)
+
+  - [K-Nearest Neighbour Classifiers](cs342/knn_class.md)
+
+  - [Regression](cs342/regression.md)
+
+    - [Linear Regression](cs342/regression/linear.md)
+    - [Introducing Non-Linearities](cs342/regression/non-linear.md)
+
 - [📈 CS352 - Project Management for Computer Scientists](cs352.md)
 
   - [Background and Definitions](cs352/background.md)
@@ -57,42 +120,3 @@
     - [Knowledge Areas](cs352/pmbok/knowledge-areas.md)
     - [Process Groups](cs352/pmbok/process-groups.md)
     - [Processes](cs352/pmbok/processes.md)
-
-- [🤖 CS342 - Machine Learning️](cs342.md)
-
-  - [Mathematical Background](cs342/background.md)
-
-    - [Notation](cs342/background/notation.md)
-    - [Types of Learning](cs342/background/learning.md)
-    - [Types of Models](cs342/background/models.md)
-    - [Joint Probabilities](cs342/background/joint_probabilities.md)
-    - [Random Variables](cs342/background/random_variables.md)
-    - [Conditional Probabilities](cs342/background/conditional_probabilities.md)
-    - [Bayes Rule](cs342/background/bayes.md)
-    - [Norms](cs342/background/norms.md)
-
-  - [Decision Trees](cs342/decision_trees.md)
-
-    - [Decision Stumps](cs342/decision_trees/decision_stumps.md)
-    - [Greedy Recursive Splitting](cs342/decision_trees/greedy_recursive_splitting.md)
-    - [Entropy](cs342/decision_trees/entropy.md)
-
-  - [Learning Theory](cs342/learning_theory.md)
-
-    - [Error](cs342/learning_theory/error.md)
-    - [IID](cs342/learning_theory/iid.md)
-    - [Hyper-Parameters](cs342/learning_theory/parameters.md)
-    - [Cross Validation](cs342/learning_theory/cross_validation.md)
-    - ["No Free Lunch" Theorem](cs342/learning_theory/nfl.md)
-
-  - [Probabilistic Classifiers](cs342/prob_class.md)
-
-    - [Naïve Bayes](cs342/prob_class/naive.md)
-    - [Additive Smoothing](cs342/prob_class/smoothing.md)
-
-  - [K-Nearest Neighbour Classifiers](cs342/knn_class.md)
-
-  - [Regression](cs342/regression.md)
-
-    - [Linear Regression](cs342/regression/linear.md)
-    - [Introducing Non-Linearities](cs342/regression/non-linear.md)
