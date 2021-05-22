@@ -4,15 +4,19 @@
 
   - [Devices and Perception](cs324/devices-and-perception.md)
 
-  - [2D Primitives](cs324/primitives.md)
+    - [Human Vision](cs324/devices-and-perception/human-vision.md)
+    - [Colour](cs324/devices-and-perception/colour.md)
 
+  - [2D Primitives](cs324/primitives.md)
+    - [OpenGL](cs324/primitives/opengl.md)
+    - [2D Graphics Primitives](cs324/primitives/2D-graphics.md)
   - [Filled Area Primitives](cs324/filled-area-primitives.md)
 
   - [Anti-Aliasing](cs324/anti-aliasing.md)
 
   - [2D Transformation and Viewing](cs324/2d-transformation-and-viewing.md)
 
-  - [2D Clipping](cs324/clipping)
+  - [2D Clipping](cs324/clipping.md)
 
   - [3D Transformation and Viewing](cs324/3d-transformation-and-viewing.md)
 
