@@ -12,7 +12,11 @@
 
   - [2D Transformation and Viewing](cs324/2d-transformation-and-viewing.md)
 
-  - [2D Clipping](cs324/clipping)
+  - [Line Clipping](cs324/clipping.md)
+
+    - [Brute Force Clipping](cs324/clipping/brute-force.md)
+    - [Cohen-Sutherland](cs324/clipping/cohen-sutherland.md)
+    - [Liang-Barsky](cs324/clipping/liang-barsky.md)
 
   - [3D Transformation and Viewing](cs324/3d-transformation-and-viewing.md)
 

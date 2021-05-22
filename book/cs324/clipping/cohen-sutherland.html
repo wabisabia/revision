@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Cohen-Sutherland - Revision</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../cs324.html"><strong aria-hidden="true">1.</strong> 🖥️ CS324 - Computer Graphics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs324/devices-and-perception.html"><strong aria-hidden="true">1.1.</strong> Devices and Perception</a></li><li class="chapter-item "><a href="../../cs324/primitives.html"><strong aria-hidden="true">1.2.</strong> 2D Primitives</a></li><li class="chapter-item "><a href="../../cs324/filled-area-primitives.html"><strong aria-hidden="true">1.3.</strong> Filled Area Primitives</a></li><li class="chapter-item "><a href="../../cs324/anti-aliasing.html"><strong aria-hidden="true">1.4.</strong> Anti-Aliasing</a></li><li class="chapter-item "><a href="../../cs324/2d-transformation-and-viewing.html"><strong aria-hidden="true">1.5.</strong> 2D Transformation and Viewing</a></li><li class="chapter-item expanded "><a href="../../cs324/clipping.html"><strong aria-hidden="true">1.6.</strong> Line Clipping</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs324/clipping/brute-force.html"><strong aria-hidden="true">1.6.1.</strong> Brute Force Clipping</a></li><li class="chapter-item expanded "><a href="../../cs324/clipping/cohen-sutherland.html" class="active"><strong aria-hidden="true">1.6.2.</strong> Cohen-Sutherland</a></li><li class="chapter-item "><a href="../../cs324/clipping/liang-barsky.html"><strong aria-hidden="true">1.6.3.</strong> Liang-Barsky</a></li></ol></li><li class="chapter-item "><a href="../../cs324/3d-transformation-and-viewing.html"><strong aria-hidden="true">1.7.</strong> 3D Transformation and Viewing</a></li><li class="chapter-item "><a href="../../cs324/modelling.html"><strong aria-hidden="true">1.8.</strong> 3D Modelling</a></li><li class="chapter-item "><a href="../../cs324/surfaces.html"><strong aria-hidden="true">1.9.</strong> Surfaces</a></li><li class="chapter-item "><a href="../../cs324/illumination-and-shading.html"><strong aria-hidden="true">1.10.</strong> Illumination and Shading</a></li><li class="chapter-item "><a href="../../cs324/ray-tracing-and-radiosity.html"><strong aria-hidden="true">1.11.</strong> Ray Tracing and Radiosity</a></li></ol></li><li class="chapter-item "><a href="../../cs342.html"><strong aria-hidden="true">2.</strong> 🤖 CS342 - Machine Learning️</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/background.html"><strong aria-hidden="true">2.1.</strong> Mathematical Background</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/background/notation.html"><strong aria-hidden="true">2.1.1.</strong> Notation</a></li><li class="chapter-item "><a href="../../cs342/background/learning.html"><strong aria-hidden="true">2.1.2.</strong> Types of Learning</a></li><li class="chapter-item "><a href="../../cs342/background/models.html"><strong aria-hidden="true">2.1.3.</strong> Types of Models</a></li><li class="chapter-item "><a href="../../cs342/background/joint_probabilities.html"><strong aria-hidden="true">2.1.4.</strong> Joint Probabilities</a></li><li class="chapter-item "><a href="../../cs342/background/random_variables.html"><strong aria-hidden="true">2.1.5.</strong> Random Variables</a></li><li class="chapter-item "><a href="../../cs342/background/conditional_probabilities.html"><strong aria-hidden="true">2.1.6.</strong> Conditional Probabilities</a></li><li class="chapter-item "><a href="../../cs342/background/bayes.html"><strong aria-hidden="true">2.1.7.</strong> Bayes Rule</a></li><li class="chapter-item "><a href="../../cs342/background/norms.html"><strong aria-hidden="true">2.1.8.</strong> Norms</a></li></ol></li><li class="chapter-item "><a href="../../cs342/decision_trees.html"><strong aria-hidden="true">2.2.</strong> Decision Trees</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/decision_trees/decision_stumps.html"><strong aria-hidden="true">2.2.1.</strong> Decision Stumps</a></li><li class="chapter-item "><a href="../../cs342/decision_trees/greedy_recursive_splitting.html"><strong aria-hidden="true">2.2.2.</strong> Greedy Recursive Splitting</a></li><li class="chapter-item "><a href="../../cs342/decision_trees/entropy.html"><strong aria-hidden="true">2.2.3.</strong> Entropy</a></li></ol></li><li class="chapter-item "><a href="../../cs342/learning_theory.html"><strong aria-hidden="true">2.3.</strong> Learning Theory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/learning_theory/error.html"><strong aria-hidden="true">2.3.1.</strong> Error</a></li><li class="chapter-item "><a href="../../cs342/learning_theory/iid.html"><strong aria-hidden="true">2.3.2.</strong> IID</a></li><li class="chapter-item "><a href="../../cs342/learning_theory/parameters.html"><strong aria-hidden="true">2.3.3.</strong> Hyper-Parameters</a></li><li class="chapter-item "><a href="../../cs342/learning_theory/cross_validation.html"><strong aria-hidden="true">2.3.4.</strong> Cross Validation</a></li><li class="chapter-item "><a href="../../cs342/learning_theory/nfl.html"><strong aria-hidden="true">2.3.5.</strong> &quot;No Free Lunch&quot; Theorem</a></li></ol></li><li class="chapter-item "><a href="../../cs342/prob_class.html"><strong aria-hidden="true">2.4.</strong> Probabilistic Classifiers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/prob_class/naive.html"><strong aria-hidden="true">2.4.1.</strong> Naïve Bayes</a></li><li class="chapter-item "><a href="../../cs342/prob_class/smoothing.html"><strong aria-hidden="true">2.4.2.</strong> Additive Smoothing</a></li></ol></li><li class="chapter-item "><a href="../../cs342/knn_class.html"><strong aria-hidden="true">2.5.</strong> K-Nearest Neighbour Classifiers</a></li><li class="chapter-item "><a href="../../cs342/regression.html"><strong aria-hidden="true">2.6.</strong> Regression</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs342/regression/linear.html"><strong aria-hidden="true">2.6.1.</strong> Linear Regression</a></li><li class="chapter-item "><a href="../../cs342/regression/non-linear.html"><strong aria-hidden="true">2.6.2.</strong> Introducing Non-Linearities</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../cs352.html"><strong aria-hidden="true">3.</strong> 📈 CS352 - Project Management for Computer Scientists</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/background.html"><strong aria-hidden="true">3.1.</strong> Background and Definitions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/background/iron-triangle.html"><strong aria-hidden="true">3.1.1.</strong> Iron Triangle</a></li><li class="chapter-item "><a href="../../cs352/background/stakeholders.html"><strong aria-hidden="true">3.1.2.</strong> Stakeholders</a></li></ol></li><li class="chapter-item "><a href="../../cs352/starting.html"><strong aria-hidden="true">3.2.</strong> Initiation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/starting/pre_initiation.html"><strong aria-hidden="true">3.2.1.</strong> Pre-Initiation</a></li><li class="chapter-item "><a href="../../cs352/starting/initiation.html"><strong aria-hidden="true">3.2.2.</strong> Initiation</a></li><li class="chapter-item "><a href="../../cs352/starting/smart.html"><strong aria-hidden="true">3.2.3.</strong> SMART Objectives</a></li></ol></li><li class="chapter-item "><a href="../../cs352/planning.html"><strong aria-hidden="true">3.3.</strong> Planning</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/planning/scope-and-time-management.html"><strong aria-hidden="true">3.3.1.</strong> Scope and Time Management</a></li><li class="chapter-item "><a href="../../cs352/planning/budgeting-and-forecasting.html"><strong aria-hidden="true">3.3.2.</strong> Budgeting and Forecasting</a></li><li class="chapter-item "><a href="../../cs352/planning/failure.html"><strong aria-hidden="true">3.3.3.</strong> Why Projects Fail</a></li><li class="chapter-item "><a href="../../cs352/planning/kpis.html"><strong aria-hidden="true">3.3.4.</strong> KPIs</a></li></ol></li><li class="chapter-item "><a href="../../cs352/execution.html"><strong aria-hidden="true">3.4.</strong> Execution</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/execution/waterfall.html"><strong aria-hidden="true">3.4.1.</strong> Waterfall</a></li><li class="chapter-item "><a href="../../cs352/execution/lean.html"><strong aria-hidden="true">3.4.2.</strong> Lean</a></li><li class="chapter-item "><a href="../../cs352/execution/agile.html"><strong aria-hidden="true">3.4.3.</strong> Agile</a></li><li class="chapter-item "><a href="../../cs352/execution/kanban.html"><strong aria-hidden="true">3.4.4.</strong> Kanban</a></li><li class="chapter-item "><a href="../../cs352/execution/scrum.html"><strong aria-hidden="true">3.4.5.</strong> Scrum</a></li><li class="chapter-item "><a href="../../cs352/execution/scrum-v-kanban.html"><strong aria-hidden="true">3.4.6.</strong> Scrum vs Kanban</a></li><li class="chapter-item "><a href="../../cs352/execution/agile-variants.html"><strong aria-hidden="true">3.4.7.</strong> Agile Variants</a></li></ol></li><li class="chapter-item "><a href="../../cs352/oversight.html"><strong aria-hidden="true">3.5.</strong> Monitoring and Controlling</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/oversight/raci.html"><strong aria-hidden="true">3.5.1.</strong> RACI Matrix</a></li><li class="chapter-item "><a href="../../cs352/oversight/swot.html"><strong aria-hidden="true">3.5.2.</strong> SWOT</a></li><li class="chapter-item "><a href="../../cs352/oversight/rbs.html"><strong aria-hidden="true">3.5.3.</strong> Risk Breakdown Structure</a></li><li class="chapter-item "><a href="../../cs352/oversight/decision-tree-analysis.html"><strong aria-hidden="true">3.5.4.</strong> Decision Tree Analysis</a></li><li class="chapter-item "><a href="../../cs352/oversight/ishikawa.html"><strong aria-hidden="true">3.5.5.</strong> Ishikawa/Fishbone Diagram</a></li><li class="chapter-item "><a href="../../cs352/oversight/sensitivity-analysis.html"><strong aria-hidden="true">3.5.6.</strong> Sensitivity Analysis</a></li><li class="chapter-item "><a href="../../cs352/oversight/risk-matrix.html"><strong aria-hidden="true">3.5.7.</strong> Risk Matrix</a></li><li class="chapter-item "><a href="../../cs352/oversight/fmea.html"><strong aria-hidden="true">3.5.8.</strong> Failure Mode and Effects Analysis</a></li></ol></li><li class="chapter-item "><a href="../../cs352/closing.html"><strong aria-hidden="true">3.6.</strong> Closing</a></li><li class="chapter-item "><a href="../../cs352/prince2.html"><strong aria-hidden="true">3.7.</strong> PRINCE2™</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/prince2/principles.html"><strong aria-hidden="true">3.7.1.</strong> Principles</a></li><li class="chapter-item "><a href="../../cs352/prince2/roles.html"><strong aria-hidden="true">3.7.2.</strong> Roles</a></li><li class="chapter-item "><a href="../../cs352/prince2/processes.html"><strong aria-hidden="true">3.7.3.</strong> Processes</a></li><li class="chapter-item "><a href="../../cs352/prince2/themes.html"><strong aria-hidden="true">3.7.4.</strong> Themes</a></li><li class="chapter-item "><a href="../../cs352/prince2/principles-vs-themes.html"><strong aria-hidden="true">3.7.5.</strong> Principles vs Themes</a></li><li class="chapter-item "><a href="../../cs352/prince2/management-products.html"><strong aria-hidden="true">3.7.6.</strong> Management Products</a></li></ol></li><li class="chapter-item "><a href="../../cs352/pmbok.html"><strong aria-hidden="true">3.8.</strong> PMBOK</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../cs352/pmbok/knowledge-areas.html"><strong aria-hidden="true">3.8.1.</strong> Knowledge Areas</a></li><li class="chapter-item "><a href="../../cs352/pmbok/process-groups.html"><strong aria-hidden="true">3.8.2.</strong> Process Groups</a></li><li class="chapter-item "><a href="../../cs352/pmbok/processes.html"><strong aria-hidden="true">3.8.3.</strong> Processes</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Revision</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="cohen-sutherland"><a class="header" href="#cohen-sutherland">Cohen-Sutherland</a></h1>
+<p>Uses simplifying tests and simple description of region in which a point lies</p>
+<p>Efficient for two cases:</p>
+<ul>
+<li>Large clipping rectangle for TRIVIAL <span style="color:#4cc73c">ACCEPT</span>s</li>
+<li>Small clipping rectangle for TRIVIAL <span style="color:red">REJECT</span>s</li>
+</ul>
+<h2 id="regions"><a class="header" href="#regions">Regions</a></h2>
+<p>4-bit <strong><em>outcodes</em></strong> \(C=[b_3, b_2, b_1, b_0]\) where</p>
+<p>\[
+\begin{align}
+b_3&amp;=y&gt;y_{max}\\
+b_2&amp;=y&lt;y_{min}\\
+b_1&amp;=x&lt;x_{min}\\
+b_0&amp;=x&gt;x_{max}\\
+\end{align}
+\]</p>
+<p>Properties:</p>
+<ul>
+<li>Central region shares no bits with any other region</li>
+<li>Vertically or horizontally aligned regions share at least one bit</li>
+</ul>
+<center><img src="regions.png" width="300px"></center>
+<h2 id="trivial-cases"><a class="header" href="#trivial-cases">Trivial Cases</a></h2>
+<p>For points \(A\) and \(B\)</p>
+<table><thead><tr><th>Outcome</th><th>Condition</th><th>Explanation</th></tr></thead><tbody>
+<tr><td><span style="color:#4cc73c">ACCEPT</span></td><td>\(C_A\lor C_B=[0000]\)</td><td>Both in central region</td></tr>
+<tr><td><span style="color:red">REJECT</span></td><td>\(C_A\land C_B\neq[0000]\)</td><td>Both in aligned regions</td></tr>
+</tbody></table>
+<p>e.g. for the example above:</p>
+<center><img src="trivial-regions.png" width="300px"></center>
+<h2 id="non-trivial-cases"><a class="header" href="#non-trivial-cases">Non-Trivial Cases</a></h2>
+<p>Not trivial \(\land\,b_i=1\) \(\implies\) intersects relevant clip box edge</p>
+<ol>
+<li>Until trivial test with \(C_A\) and \(C_B\) passes</li>
+<li>Scan outcodes in parallel from MSB until bit \(b_i=1,\,b_i\in C_P\)</li>
+<li>Compute intersection \(P'\) with relevant edge
+<ul>
+<li>Compute new point
+\[
+P'=\begin{cases}(x',y_{max/min})&amp;i=3/2\\(x_{min/max},y')&amp;i=1/0\end{cases}
+\]
+where
+\begin{align}
+x'&amp;=x_P+t(x_{P_{other}}-x_P)&amp;=x_P+(\frac{y_{max/min}-y_P}{y_{P_{other}}-y_P})(x_{P_{other}}-x_P)\\
+y'&amp;=y_P+t(y_{P_{other}}-y_P)&amp;=y_P+(\frac{x_{min/max}-x_P}{x_{P_{other}}-y_P})(y_{P_{other}}-y_P)
+\end{align}</li>
+</ul>
+</li>
+<li>Compute \(P'\)'s outcode</li>
+<li>Do trivial test with \(P'\) and \(P_{other}\)</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../cs324/clipping/brute-force.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../cs324/clipping/liang-barsky.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../cs324/clipping/brute-force.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../cs324/clipping/liang-barsky.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
