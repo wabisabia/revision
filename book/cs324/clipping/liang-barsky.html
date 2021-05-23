@@ -175,11 +175,14 @@
 <p>Written as</p>
 <p>\begin{align}
 x_{min}&amp;\leq x_A+t\Delta x\leq x_{max}\\
-y_{min}&amp;\leq y_A+t\Delta y\leq y_{may}
+y_{min}&amp;\leq y_A+t\Delta y\leq y_{max}
 \end{align}</p>
 <p>Yielding 4 inequalities of the form \(tp_k\leq q_k\):</p>
 <p>\begin{align}
-p_1&amp;=-\Delta x
+p_1&amp;=-\Delta x&amp;q_1=x_A-x_{min}\\
+p_2&amp;=\Delta x&amp;q_2=x_{max}-x_A\\
+p_3&amp;=-\Delta y&amp;q_3=y_A-y_{min}\\
+p_4&amp;=\Delta y&amp;q_4=y_{max}-y_A
 \end{align}</p>
 
                     </main>
