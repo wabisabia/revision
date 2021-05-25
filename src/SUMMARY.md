@@ -12,6 +12,11 @@
     - [2D Graphics Primitives](cs324/primitives/2D-graphics.md)
   - [Filled Area Primitives](cs324/filled-area-primitives.md)
 
+    - [Three-half planes](cs324/filled-area-primitives/three-half-planes.md)
+    - [Odd-Even Rule](cs324/filled-area-primitives/odd-even-rule.md)
+    - [Non-Zero Winding Number Rule](cs324/filled-area-primitives/non-zero-winding.md)
+    - [Scan Converting Polygons](cs324/filled-area-primitives/scan-convert.md)
+
   - [Anti-Aliasing](cs324/anti-aliasing.md)
 
   - [2D Transformation and Viewing](cs324/2d-transformation-and-viewing.md)
