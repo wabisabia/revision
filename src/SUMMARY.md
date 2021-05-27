@@ -2,6 +2,10 @@
 
 - [🖥️ CS324 - Computer Graphics](cs324.md)
 
+  - [Mathematical Background](cs324/background.md)
+
+    - [2D Geometry](cs324/background/2d-geometry.md)
+
   - [Devices and Perception](cs324/devices-and-perception.md)
 
   - [2D Primitives](cs324/primitives.md)

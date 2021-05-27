@@ -5,7 +5,7 @@
    1. Compute intersections with clip box
    1. If intersections are interior, draw portion of line in box
 
-Easier to describe line segments \\(AB\\) using **_parametric_** equations
+Easier to describe line segments \\(\overline{AB}\\) using **_parametric_** equations
 
 \begin{align}
 x&=x_A+t(x_B-x_A)\\\\
