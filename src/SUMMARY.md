@@ -2,26 +2,25 @@
 
 - [🖥️ CS324 - Computer Graphics](cs324.md)
 
+  - [Mathematical Background](cs324/background.md)
+
+    - [2D Geometry](cs324/background/2d-geometry.md)
+
   - [Devices and Perception](cs324/devices-and-perception.md)
 
-    - [Human Vision](cs324/devices-and-perception/human-vision.md)
-    - [Colour](cs324/devices-and-perception/colour.md)
-
   - [2D Primitives](cs324/primitives.md)
-    - [OpenGL](cs324/primitives/opengl.md)
-    - [2D Graphics Primitives](cs324/primitives/2D-graphics.md)
-  - [Filled Area Primitives](cs324/filled-area-primitives.md)
 
-    - [Three-half planes](cs324/filled-area-primitives/three-half-planes.md)
-    - [Odd-Even Rule](cs324/filled-area-primitives/odd-even-rule.md)
-    - [Non-Zero Winding Number Rule](cs324/filled-area-primitives/non-zero-winding.md)
-    - [Scan Converting Polygons](cs324/filled-area-primitives/scan-convert.md)
+  - [Filled Area Primitives](cs324/filled-area-primitives.md)
 
   - [Anti-Aliasing](cs324/anti-aliasing.md)
 
   - [2D Transformation and Viewing](cs324/2d-transformation-and-viewing.md)
 
-  - [2D Clipping](cs324/clipping.md)
+  - [Line Clipping](cs324/clipping.md)
+
+    - [Brute Force Clipping](cs324/clipping/brute-force.md)
+    - [Cohen-Sutherland](cs324/clipping/cohen-sutherland.md)
+    - [Liang-Barsky](cs324/clipping/liang-barsky.md)
 
   - [3D Transformation and Viewing](cs324/3d-transformation-and-viewing.md)
 
