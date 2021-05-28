@@ -1,53 +1,102 @@
 # Human Vision
 
-## World properties inferred from images:
+## Ocular Biology
 
-- Shape from **shading**, **texture gradients** and **motion parallax**
+<center><img src="ocular-biology.png" width="300px"></center>
 
-- Depth from **occlusion boundaries** and **stereo**
+### Field of View
 
-## Eye Anatomy
+| Property    | Monocular | Binocular |
+| ----------- | --------- | --------- |
+| Horizontal° | 160       | 200       |
+| Vertical°   | 135       | 135       |
 
-- Light refracted by **cornea** through the **pupil** then focused by **lens** on to **fovea**
+### Retina
 
-## Field of View
+10 cell layers
 
-- Fibres from eyes meet at **optic chasm**
-- Left visual field fibres go to right **lateral geniculate nucleus(LGN)**
-- Right visual field fibres go to left **LGN**
-- Fibres project from **LGN** to **primary visual cortex**
+Base layer contains **_rods_** and **_cones_**
 
-## Retina
+Central 1° is **_fovea_**
 
-- First stage of neural processing
-- 5 layers of cell (**photoreceptors**) performing image analysis
+| Property        | Cones  | Rods                                        |
+| --------------- | ------ | ------------------------------------------- |
+| Foveal density  | High   | Low (increases towards fovea)               |
+| Sensitivity     | Low    | High                                        |
+| Detect          | Colour | Luminance (peripheral and low-light vision) |
+| Million Per Eye | 6      | 120                                         |
+| \# Types        | 3      | 1                                           |
 
-## Photoreceptors
+#### Cones
 
-### Cones
+| Property        | Red          | Green      | Blue      |
+| --------------- | ------------ | ---------- | --------- |
+| Tuned to        | yellow-green | blue-green | violet    |
+| Wavelength (nm) | 560          | 530        | 430       |
+| Name            | Long (L)     | Middle (M) | Short (S) |
 
-- Less sensitive than rods
-- Dominate central area of vision in the **fovea**
-- Infer colour through received wavelengths
-- 6 million per eye
-- Types
-  - Yellow-Green (Red)
-  - Blue-Green (Green)
-  - Violet (Blue)
+### Visual Pathway
 
-### Rods
+<center><img src="visual-pathway.png" width="400px"></center>
 
-- Can't discriminate colour / detects luminance
-- Used for peripheral and night vision
-- 120 million per eye
+## Visual Perception
 
-## Perception of Intensity
+Spatiotemporal perception of intensity and colour
 
-- Irradiance: Power per unit are
-- Radiance: Power per wavelength interval
-- Luminance: Relative brightness of a source
-- Steven's Law: \\( S = I^v \\)
-  - S: perceived sensation
-  - I: actual intensity
-- Weber's Law (Intensity Difference): \\(JND = \frac{\Delta I}{I} \approx 0.01\\)
-  - JND: Just Noticeable Difference
+Humans can infer
+
+- Shape from
+  - **_shading_**
+  - **_texture_**
+  - **_motion parallax_**
+- Depth from
+  - **_perspective effects_**
+  - **_occlusions_**
+  - **_motion parallax_**
+  - **_stereo_**
+  - **_disparity_**
+
+### Intensity
+
+| Property   | Description                          |
+| ---------- | ------------------------------------ |
+| Irradiance | Radiant flux per unit area           |
+| Radiance   | Radiant flux per wavelength interval |
+| Luminance  | Relative brightness                  |
+| Lightness  | Uniform perceptual scale             |
+
+### Steven's Power Law
+
+Magnitude of sensation \\(S\\) increases exponentially with stimulus intensity \\(I\\):
+
+\\[
+S=I^v
+\\]
+
+| Sensation  | \\(v\\) |
+| ---------- | ------- |
+| Brightness | 0.33    |
+| Loudness   | 0.60    |
+| Smell      | 0.60    |
+| Heaviness  | 1.45    |
+
+### Weber's Law
+
+Just Noticable Difference \\(JND\\) is linearly proportional to absolute intensity \\(I\\)
+
+\\[
+JND=\frac{\Delta I}{I}\approx0.01
+\\]
+
+### Contrast Ratio
+
+Luminosity ratio of brightest and darkest colour a system can produce
+
+| System       | Contrast Ratio |
+| ------------ | -------------- |
+| Human vision | 100:1          |
+| Printing     | 10:1           |
+| LCD          | 400:1-1000:1   |
+| CRT Monitors | 80:1           |
+
+Humans perceive ~150 shades of grey

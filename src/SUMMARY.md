@@ -8,9 +8,20 @@
 
   - [Devices and Perception](cs324/devices-and-perception.md)
 
+    - [Human Vision](cs324/devices-and-perception/human-vision.md)
+    - [Colour](cs324/devices-and-perception/colour.md)
+
   - [2D Primitives](cs324/primitives.md)
 
+    - [2D Graphics](cs324/primitives/2D-graphics.md)
+    - [OpenGL](cs324/primitives/opengl.md)
+
   - [Filled Area Primitives](cs324/filled-area-primitives.md)
+
+    - [Non-Zero Winding](cs324/filled-area-primitives/non-zero-winding.md)
+    - [Odd-Even Rule](cs324/filled-area-primitives/odd-even-rule.md)
+    - [Scan Conversion](cs324/filled-area-primitives/scan-convert.md)
+    - [Three Half-Planes](cs324/filled-area-primitives/three-half-planes.md)
 
   - [Anti-Aliasing](cs324/anti-aliasing.md)
 

@@ -1,5 +1,20 @@
 # Colour
 
+## CIE Chromaticity Diagram
+
+Designed by Commission Internationale de L'Eclairage
+
+Defines colour-space relating electromagnetic wavelength distribution to human colour vision
+
+Coordinates represent relative fractions of tristimulus values present in a given XYZ colour model
+
+\begin{align}
+x=\frac{X}{X+Y+Z}
+y=\frac{Y}{X+Y+Z}
+z=\frac{Z}{X+Y+Z}=1-x-y
+x+y+z=1
+\end{align}
+
 ## Glossary
 
 - Hue - Distinguishes between colours
