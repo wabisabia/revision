@@ -10,6 +10,8 @@
 
     - [Human Vision](cs324/devices-and-perception/human-vision.md)
     - [Colour](cs324/devices-and-perception/colour.md)
+    - [Displays](cs324/devices-and-perception/displays.md)
+    - [Graphics Architecture](cs324/devices-and-perception/graphics-architecture.md)
 
   - [2D Primitives](cs324/primitives.md)
 
